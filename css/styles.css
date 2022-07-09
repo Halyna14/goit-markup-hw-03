@@ -28,21 +28,27 @@ body {
 }
 .list {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 /* Base styles */
-.hero-btn:hover,
-.hero-btn:focus {
-  color: var(--light-bg-cl);
-  background-color: var(--accent-txt-cl);
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: calc(30 / 16);
-  letter-spacing: 0.06em;
-  cursor: pointer;
+.container{
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  outline: 2px solid red;
+  outline-offset: -2px;
 }
+
 .hero-btn {
+  min-width: 200px;
+    min-height: 50px;
+    padding: 10px 32px;
+    border-radius: 4px;
   color: var(--light-bg-cl);
   background-color: var(--accent-txt-cl);
   font-family: inherit;
@@ -50,9 +56,11 @@ body {
   font-size: 16px;
   line-height: calc(30 / 16);
   letter-spacing: 0.06em;
+    cursor: pointer;
 }
 
 .btn {
+ 
   font-family: inherit;
   cursor: pointer;
   font-weight: 500;
@@ -60,6 +68,7 @@ body {
   line-height: calc(26 / 16);
   letter-spacing: 0.03em;
 }
+
 .btn-link:hover,
 .btn-link:focus {
   color: var(--light-bg-cl);
@@ -74,7 +83,59 @@ body {
   color: var(--main-txt-cl);
   background-color: var(--light-bg-cl);
 }
+
+/* logo */
+.logo {
+  display: flex;
+  align-items: center;
+  padding-right: 93px;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: calc(31 / 26);
+  letter-spacing: 0.03em;
+ 
+}
+
+.logo-accent {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  color: var(--accent-txt-cl);
+  text-decoration: none;
+}
+
+.logo-dark {
+  color: var(--logo-dark-cl);
+}
+
+.logo-light {
+  color: var(--light-bg-cl);
+}
+
+.header-container{
+  display: flex;
+  align-items: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-nav{
+  display: flex;
+  margin-right:auto;
+  gap: 50px;
+  align-items: center;
+    flex-direction: row;
+
+}
+
+.header-list{
+  display: flex;
+  gap: 50px;
+}
+
 .header-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
   font-weight: 500;
   font-size: 14px;
   line-height: calc(16 / 14);
@@ -85,6 +146,7 @@ body {
   color: var(--accent-txt-cl);
 }
 .header-phone {
+    margin-right: 40px;
   font-weight: 500;
   font-size: 14px;
   line-height: calc(16 / 14);
@@ -103,21 +165,40 @@ body {
 .hero {
   background-color: var(--hero-cl);
 }
-.hero-title {
+.hero-title{
+  display:flex;
+  padding: 199px 464px 281px 440px;
+text-align: center;
+margin: 0;
   font-weight: 900;
   font-size: 44px;
   line-height: calc(60 / 44);
+
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--light-bg-cl);
 }
+
+.visually-hidden{
+  visibility: hidden;
+}
 /* section */
+
+.section-list{
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding-bottom: 94px;
+      flex-direction: row;
+        justify-content: center;
+}
 
 .section-title {
   font-weight: 700;
   font-size: 36px;
   line-height: calc(42 / 36);
   letter-spacing: 0.03em;
+  text-align: center;
   color: var(--main-txt-cl);
 }
 .title {
@@ -135,6 +216,7 @@ body {
   letter-spacing: 0.03em;
   color: var(--phone-cl);
 }
+
 .team-item {
   font-weight: 500;
   font-size: 16px;
@@ -150,6 +232,12 @@ body {
 }
 
 .team-list {
+  display: flex;
+  flex-direction: row;
+   justify-content: center;
+  gap: 30px;
+  padding: 94px 94px;
+  margin: 0;
   background-color: var(--bg-medium-cl);
 }
 .subtitle {
@@ -164,25 +252,6 @@ body {
   line-height: calc(30 / 16);
   letter-spacing: 0.03em;
   color: var(--phone-cl);
-}
-/* logo */
-.logo {
-  font-weight: 700;
-  font-size: 26px;
-  line-height: calc(31 / 26);
-  letter-spacing: 0.03em;
-}
-.logo-accent {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  color: var(--accent-txt-cl);
-  text-decoration: none;
-}
-.logo-dark {
-  color: var(--logo-dark-cl);
-}
-.logo-light {
-  color: var(--light-bg-cl);
 }
 
 .address {
@@ -201,3 +270,29 @@ body {
 .dark-bg {
   background-color: var(--hero-cl);
 }
+
+/* Work 3 */
+
+/* Частковий ресет стилей браузера start*/
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Частковий ресет стилей браузера end */
