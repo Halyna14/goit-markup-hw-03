@@ -95,19 +95,11 @@ body {
 .header {
   color: var(--main-txt-cl);
   background-color: var(--light-bg-cl);
-  border: 1px solid #ececec;
-  border-top: none;
-  border-right: none;
-  border-left: none;
+  border-bottom: 1px solid #ececec;
 }
 
 /* logo */
 .logo {
-  display: flex;
-  align-items: center;
-  margin-right: 93px;
-  padding-top: 24px;
-  padding-bottom: 25px;
   font-weight: 700;
   font-size: 26px;
   line-height: calc(31 / 26);
@@ -131,8 +123,6 @@ body {
 
 .header-container {
   display: flex;
-  align-items: center;
-  flex-direction: row;
   align-items: center;
 }
 
@@ -163,7 +153,6 @@ body {
   color: var(--accent-txt-cl);
 }
 .header-phone {
-  margin-right: 40px;
   font-weight: 500;
   font-size: 14px;
   line-height: calc(16 / 14);
@@ -201,9 +190,18 @@ body {
   text-transform: uppercase;
   color: var(--light-bg-cl);
 }
-
 .visually-hidden {
-  visibility: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 /* Card set */
 .card-set {
@@ -219,20 +217,18 @@ body {
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
-  margin: 0;
 }
 
 .section-list {
   display: flex;
   gap: 30px;
   margin: 0;
-  padding-bottom: 94px;
-  flex-direction: row;
-  justify-content: center;
 }
-
+.item {
+  width: 270px;
+}
 .section-title {
-  margin-bottom: 50px;
+  padding-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: calc(42 / 36);
@@ -240,9 +236,13 @@ body {
   text-align: center;
   color: var(--main-txt-cl);
 }
+.doing-section {
+  padding-bottom: 94px;
+}
 .title {
   font-weight: 700;
   font-size: 14px;
+  margin-bottom: 50px;
   line-height: calc(16 / 14);
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -261,7 +261,7 @@ body {
 }
 .team-item {
   /* flex-basis: calc((100% - 30px * 3) / 4); */
-  margin: 15px;
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: calc(19 / 16);
@@ -300,6 +300,9 @@ body {
   padding-right: 24px;
   border: 1px solid #eeeeee;
   border-top: none;
+}
+.subtitle {
+  margin-bottom: 4px;
 }
 .subtitle {
   font-weight: 700;
@@ -379,12 +382,22 @@ img {
   border-radius: 4px;
 }
 
-.footer-container {
+.footer {
   padding-top: 60px;
   padding-bottom: 60px;
 }
 .footer-logo {
-  display: flex;
-  align-items: baseline;
-  padding-bottom: 20px;
+  display: inline-block;
+
+  margin-bottom: 20px;
+}
+
+.footer-address {
+  margin-bottom: 9px;
+}
+.contacts-item {
+  margin-bottom: 9px;
+}
+.contacts-item:last-child {
+  margin-bottom: 0;
 }
