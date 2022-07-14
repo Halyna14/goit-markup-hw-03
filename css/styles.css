@@ -228,7 +228,7 @@ body {
   width: 270px;
 }
 .section-title {
-  padding-bottom: 50px;
+  margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: calc(42 / 36);
@@ -242,7 +242,7 @@ body {
 .title {
   font-weight: 700;
   font-size: 14px;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   line-height: calc(16 / 14);
   letter-spacing: 0.03em;
   text-transform: uppercase;
